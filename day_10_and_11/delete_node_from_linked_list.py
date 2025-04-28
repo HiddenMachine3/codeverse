@@ -6,11 +6,6 @@
 
 class Solution:
     def deleteNode(self, node):
-        prev = node
-        while node and node.next:
-            node.val = node.next.val
-            prev = node
-            node = node.next
-    
-        prev.next = None
+        node.val = node.next.val
+        node.next = node.next.next
         
